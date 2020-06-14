@@ -94,7 +94,7 @@ header {
     text-align: center;
     font-weight: 800;
     font-size: 75px;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .main_subtitle {
@@ -151,7 +151,7 @@ background-color: #ec4f77;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 700px;
+    height: 800px;
     text-align: center;
     padding: 80px 0 40px;
 }
@@ -237,7 +237,7 @@ background-color: #ec4f77;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      height: 200px;
+      height: 350px;
       padding: 90px 0 70px 0;
   }
 
@@ -283,7 +283,7 @@ background-color: #ec4f77;
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 550px;
     color: #222222;
     font-weight: bold;
     padding: 60px 0;
