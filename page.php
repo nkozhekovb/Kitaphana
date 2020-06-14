@@ -6,7 +6,7 @@ $mess='email: '.$email.'; сообщение: '.$text;//сообщение
 $headers  = "Content-type: text/html; charset=utf-8 \r\n";//кодировка 
 $headers .= "From: no-reply@example.com";//откуда отправлено письмо
 //отправляем email админу
-if(mail('admin@email.ru', 'Форма обратной связи', $mess, $headers)){
+if(mail('nkozhekovb@gmail.com', 'Форма обратной связи', $mess, $headers)){
 echo '<div class="alert alert-success alert-dismissible" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     Сообщение успешно отправлено!'.$email.', '.$text.'
