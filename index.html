@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Document</title>
+    <title>Заказ кальянов</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="feedback/css/jquery.arcticmodal.css">
-    <link rel="stylesheet" type="text/css" href="feedback/css/jquery.jgrowl.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header id="header">
+        <div class="arrow-8"></div>
+        <div class="button-btn">
+            Заказать звонок
+        </div>
         <div class="header_logo">
             <img class="header_partners" src="images/partners.png" alt="">
             <div class="logo_number">
@@ -23,7 +24,7 @@
                     +7 707 179 70 58
                 </div>
                 <div class="header_call">
-                    <a class="modal_btn" href="#">Заказать звонок</a>
+                    <a class="modal_btn" href="#header">Заказать звонок</a>
                 </div>
             </div>
         </div>
@@ -49,7 +50,7 @@
                     Забираем кальян на следующий день
                 </div>
                 <div class="order_button">
-                    <a class="modal_btn" href="#">Заказать кальян</a>
+                    <a class="modal_btn" href="#call">Заказать кальян</a>
                 </div>
                 <div class="order_text order_right">
                     Большой парк кальянов</br>
@@ -160,7 +161,7 @@
                 соберет для вас идеальный кальян
             </div>
             <div class="order_button call_button">
-                <a class="modal_btn" href="#">Заказать кальян</a>
+                <a class="modal_btn" href="#call">Заказать кальян</a>
             </div>
         </div>
     </div><!--Call-->
@@ -265,38 +266,13 @@
     <div class="footer">
         
     </div>
-    <div style="display:none;">
-    <!-- Формы в модальных окнах -->
-        <div class="box-modal" id="small-modal">
-            <div class="modal-close arcticmodal-close">x</div>
-            <div class="modal-content-box">
-                <legend>Заказать кальян</legend>
-                <form action="" method="get" name="form-1">
-                    <div class="input-prepend">
-                        <span class="add-on"><i class="icon-user"></i></span>
-                        <input class="input-medium focused" name="name" type="text" placeholder="Ваше имя">
-                    </div>
-                    <div class="input-prepend">
-                        <span class="add-on"><i class="icon-book"></i></span>
-                        <input class="input-medium focused" name="tell" type="text" placeholder="Ваш телефон">
-                    </div>
-                    <input class="feedback btn btn-block btn-success" name="send" type="button" value="Отправить">
-                </form>
-            </div>
-        </div>
-    <!-- // Формы в модальных окнах -->
-    </div>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="js/index.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="feedback/js/feedback.js"></script>
-    <script src="feedback/js/jquery.arcticmodal.js"></script>
-    <script src="feedback/js/jquery.jgrowl.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function() {
-		$(document).on('click', '.modal_btn', function(){
-			$('#small-modal').arcticmodal();
-		});
-	});
-</script>
+    <script>
+    $(".modal_btn").click(function () {
+        $(".arrow-8").toggleClass("display_block");
+    });
+    </script>
+    <script charset="utf-8" type="text/javascript" src="https://callback-free.ru/api/js/form-builder.js" data-key="RJzQjMoB"></script>
 </body>
 </html>
