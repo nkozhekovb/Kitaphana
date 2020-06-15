@@ -1,3 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+  box-sizing: border-box;
+  line-height: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -12,6 +20,11 @@ a, h1, h2, h3, h4, h5, h6 {
 }
 
 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
     text-decoration: none;
     color: #fff;
 }
@@ -45,7 +58,8 @@ header {
 }
 
 .logo_number {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
     font-size: 29px;
     text-align: center;
     margin-top: 50px;
@@ -62,6 +76,9 @@ header {
 
 .header_call a:hover {
     background-color: #ec4f77;
+    text-decoration: none;
+    color: #fff;
+
 }
 
 .header_menu {
@@ -74,6 +91,9 @@ header {
     font-weight: bold;
     font-size: 20px;
     position: relative;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .header_menu a::before {
@@ -93,14 +113,18 @@ header {
 .main_title {
     text-align: center;
     font-weight: 800;
-    font-size: 75px;
+    font-size: 63px;
     margin-top: 100px;
+}
+
+.main_title span {
+  font-weight: 100;
 }
 
 .main_subtitle {
     text-align: center;
     font-weight: 800;
-    font-size: 45px;
+    font-size: 35px;
     margin-top: 20px;
 }
 
@@ -112,8 +136,10 @@ header {
 }
 
 .order_text {
-    font-size: 25px;
+    font-size: 18px;
     text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5;
 }
 
 .order_left {
@@ -134,7 +160,9 @@ header {
 }
 
 .order_button a:hover {
-background-color: #ec4f77;
+    background-color: #ec4f77;
+    text-decoration: none;
+    color: #fff;
 }
 
 .header_arrow {
@@ -159,10 +187,12 @@ background-color: #ec4f77;
 .about_title {
     font-size: 148px;
     line-height: .65em;
+    font-family: 'Oswald', sans-serif;
 }
 
 .about_title span {
     font-size: 77px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .about_price {
@@ -176,18 +206,22 @@ background-color: #ec4f77;
     padding: 10px 13px;
     margin: 30px 13px;
     font-size: 61px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .about_second_title {
-    font-size: 48px;
+    font-size: 55px;
+    font-family: 'Russo One', sans-serif;
 }
 
 .about_second_price {
     margin: 15px 0;
     font-size: 50px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .about_time {
+    font-family: 'Balsamiq Sans', cursive;
     margin: 0 auto;
     font-size: 26px;;
     background-color: #ff7700;
@@ -204,7 +238,7 @@ background-color: #ec4f77;
     background-position: center;
     background-repeat: no-repeat;
     height: 725px;
-    padding: 120px 0;
+    padding: 100px 0;
     text-align: center;
 }
 
@@ -226,7 +260,38 @@ background-color: #ec4f77;
     width: 71px;
     height: 5px;
     background-color: #fcac45;
-    margin: 0 auto;
+    margin: 0 auto 50px;
+}
+
+.order_items {
+  display: flex;
+  justify-content: center;
+}
+
+.order_item {
+  width: 15%;
+  margin: 0 1%;
+}
+
+.order_item img {
+  margin-bottom: 20px;
+}
+
+.order_item-title {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.order_item-text {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.order_item-text span{
+  color: #a7733f;
 }
 
   /*Call*/
@@ -563,3 +628,9 @@ background-color: #ec4f77;
       height: 90px;
       background-color: #222222;
   }
+
+  /*Adaptive*/
+
+@media screen and (max-width: 1280px) { div.contentblock {width: 1200px;} }
+@media screen and (max-width: 1140px) { div.contentblock {width: 1024px;} }
+@media screen and (max-width: 992px) { div.contentblock {width: 970px;} }
