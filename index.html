@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="feedback/css/jquery.arcticmodal.css">
+    <link rel="stylesheet" type="text/css" href="feedback/css/jquery.jgrowl.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <header>
@@ -18,7 +23,7 @@
                     +7 707 179 70 58
                 </div>
                 <div class="header_call">
-                    <a href="#">Заказать звонок</a>
+                    <a class="modal_btn" href="#">Заказать звонок</a>
                 </div>
             </div>
         </div>
@@ -33,7 +38,7 @@
         </div>
         <div class="header_title">
             <div class="main_title">
-                Аренда и доставка кальяна на дом
+               <span>Аренда и доставка</span> кальяна на дом
             </div>
             <div class="main_subtitle">
                 Готовые кальяны, с бесплатной доставкой по алмате
@@ -44,7 +49,7 @@
                     Забираем кальян на следующий день
                 </div>
                 <div class="order_button">
-                    <a href="#">Заказать кальян</a>
+                    <a class="modal_btn" href="#">Заказать кальян</a>
                 </div>
                 <div class="order_text order_right">
                     Большой парк кальянов</br>
@@ -90,6 +95,50 @@
         <div class="order_title_line2">
 
         </div>
+        <div class="order_items">
+            <div class="order_item">
+                <img src="images/phone.png" alt="">
+                <div class="order_item-title">
+                    ОФОРМИТЬ ЗАКАЗ
+                </div>
+                <div class="order_item-text">
+                    СОБЕРИТЕ СВОЙ КАЛЬЯН 
+                    ПО ТЕЛЕФОНУ
+                </div>
+            </div>
+            <div class="order_item">
+                <img src="images/hookah.png" alt="">
+                <div class="order_item-title">
+                    ПОДГОТОВКА КАЛЬЯНА
+                </div>
+                <div class="order_item-text">
+                    СПЕЦИАЛИСТ ОДГОТОВТ ЧАШУ
+ТАБАК И ЛЮБИСЫЙ ВКУС И ДОСТАВИТ В НАЗНАЧЕНОЕ ВРЕМЯ
+                </div>
+            </div>
+            <div class="order_item">
+                <img src="images/delivery.png" alt="">
+                <div class="order_item-title">
+                    ДОСТАВКА
+                </div>
+                <div class="order_item-text">
+                    Ы ПОЛУЧИТЕ КАЛЬЯННЫЙ НАБОР: КАЛЬЯН, ГОТОВЫЙ ФРУКТ, УГЛИ, МУШТУКИ, ТРУБКУ, И ИНСТРКУЦИУЮ
+                    <span>ПРИ НЕОБХОДИМОСТИ НАШ СПЕЦИАЛИСТ СОБЕРЕТ ВАМ КАЛЬЯН </span>
+                </div>
+            </div>
+            <div class="order_item">
+                <img src="images/pickup.png" alt="">
+                <div class="order_item-title">
+                    ЗАБИРАЕМ
+                </div>
+                <div class="order_item-text">
+                    КАЛЬЯН ЗАБИРАЕМ С УТРА
+( О ВРЕМЕНИ ДОГОВАРИВАЕМСЯ) МОЖНО НЕ МЫТЬ 
+ПРОСТО СЛЕЙТЕ ВОДУ 
+И ПОЛОЖИТЕ В КОРОБКУ
+                </div>
+            </div>
+        </div>
     </div><!--Order-->
     <div class="call" id="call">
         <div class="call_left">
@@ -111,7 +160,7 @@
                 соберет для вас идеальный кальян
             </div>
             <div class="order_button call_button">
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Заказать кальян</button>
+                <a class="modal_btn" href="#">Заказать кальян</a>
             </div>
         </div>
     </div><!--Call-->
@@ -216,80 +265,38 @@
     <div class="footer">
         
     </div>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Форма обратной связи</h4>
+    <div style="display:none;">
+    <!-- Формы в модальных окнах -->
+        <div class="box-modal" id="small-modal">
+            <div class="modal-close arcticmodal-close">x</div>
+            <div class="modal-content-box">
+                <legend>Заказать кальян</legend>
+                <form action="" method="get" name="form-1">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <input class="input-medium focused" name="name" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-book"></i></span>
+                        <input class="input-medium focused" name="tell" type="text" placeholder="Ваш телефон">
+                    </div>
+                    <input class="feedback btn btn-block btn-success" name="send" type="button" value="Отправить">
+                </form>
             </div>
-            <div class="modal-body"> 
-                  <input type="text" class="form-control" id="email" placeholder="Email">
-                  <textarea class="form-control" id="text" cols="30" rows="10" placeholder="Сообщение"></textarea>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-              <button type="button" class="btn btn-primary" id="btn-send">Отправить письмо</button>
-            </div>
-          </div>
         </div>
-      </div>
-      <script type="text/javascript">
-        $(document).ready(function(){
-       $('#btn-send').click(function () {   
-            …
-               });
-       });    
-       </script>
-       <script type="text/javascript">
-        $(document).ready(function(){   
-           $('#btn-send').click(function () {
-               var email = $('#email').val();
-               var text = $('#text').val();
-       
-           });
-       });    
-       </script>
-       <script type="text/javascript">
-        $(document).ready(function(){   
-           $('#btn-send').click(function () {
-               var email = $('#email').val();
-               var text = $('#text').val();
-               $.ajax({
-                   type: "POST", //метод передачи данных
-                   url: '/page.php', //обработчик php
-                   data: {email: email, text:text}, //передаваемые данные
-                   success: function(data) { //получение результата
-                   …
-                       }
-                   });
-           });
-       });    
-       </script>
-       <script type="text/javascript">
-        $(document).ready(function(){   
-           $('#btn-send').click(function () {
-               var email = $('#email').val();
-               var text = $('#text').val();
-               $.ajax({
-                   type: "POST", //метод передачи данных
-                   url: '/page.php', //обработчик php
-                   data: {email: email, text:text},//передаваемые данные
-                   success: function(data) { //получение результата
-                       var old = $('.modal-header').html();//получаем содежимое div
-                       $('.modal-header').html(old + data); //добавляем сообщение об отправке
-                       }
-                   });
-           });
-       });    
-       </script>
-	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- // Формы в модальных окнах -->
+    </div>
     <script src="js/index.js"></script>
-    <script src="js/main.js"></script>
-    <script src="/feedback/vendors/jquery/jquery-3.3.1.min.js"></script>
-    <script src="/feedback/vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/feedback/js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <script src="feedback/js/jquery.arcticmodal.js"></script>
+    <script src="feedback/js/jquery.jgrowl.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$(document).on('click', '.modal_btn', function(){
+			$('#small-modal').arcticmodal();
+		});
+	});
+</script>
 </body>
 </html>
