@@ -4,7 +4,10 @@
 * {
   box-sizing: border-box;
   line-height: normal;
+  overflow-x: hidden;
 }
+
+
 
 body {
     margin: 0;
@@ -66,6 +69,10 @@ header {
     margin-right: 10%;
 }
 
+.header_call {
+  overflow: hidden;
+}
+
 .header_call a{
     background-color: #f4003f;
     padding: 5px 15px;
@@ -84,6 +91,7 @@ header {
 .header_menu {
     text-align: center;
     margin-top: 35px;
+    overflow: hidden;
 }
 
 .header_menu a {
@@ -150,6 +158,7 @@ header {
     font-size: 35px;
     margin: 0 40px;
     font-weight: 800;
+    overflow: hidden;
 }
 
 .order_button a{
@@ -182,6 +191,7 @@ header {
     height: 800px;
     text-align: center;
     padding: 80px 0 40px;
+    overflow: hidden;
 }
 
 .about_title {
@@ -240,6 +250,7 @@ header {
     height: 725px;
     padding: 100px 0;
     text-align: center;
+    overflow: hidden;
 }
 
 .order_title {
@@ -304,6 +315,7 @@ header {
       align-items: center;
       height: 350px;
       padding: 90px 0 70px 0;
+      overflow: hidden;
   }
 
 .call_left {
@@ -345,7 +357,7 @@ header {
 .set {
     background-color: #b8b8b8;
     background-image: url(../images/set.png);
-    background-size: contain;
+    background-size: 50%;
     background-position: right;
     background-repeat: no-repeat;
     height: 550px;
@@ -385,6 +397,7 @@ header {
     text-align: center;
     padding-bottom: 120px;
     height: 561px;
+    overflow: hidden;
 }
 
 .partners_title {
@@ -416,15 +429,20 @@ header {
 }
 
 /*Slider*/
+.anons_slider {
+  overflow: hidden;
+}
 
 .slider {
     position: relative;
     height: 100vh;
+    overflow: hidden;
   }
   .slider__slides {
     z-index: 1;
     position: relative;
     height: 100%;
+    overflow: hidden;
   }
   .slider__control {
     z-index: 2;
@@ -630,7 +648,97 @@ header {
   }
 
   /*Adaptive*/
+@media screen and (max-width: 4000px) {
+    header {
+      height: 40vh;
+    }
+}
 
-@media screen and (max-width: 1280px) { div.contentblock {width: 1200px;} }
-@media screen and (max-width: 1140px) { div.contentblock {width: 1024px;} }
-@media screen and (max-width: 992px) { div.contentblock {width: 970px;} }
+@media screen and (max-width: 2000px) {
+  header {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+
+}
+
+
+@media screen and (max-width: 1400px) {
+    .call_left_title {
+      font-size: 30px;
+    }
+
+    .call_right_text {
+      font-size: 20px;
+    }
+
+    header {
+      height: 100vw;
+    }
+    .header_logo img {
+      height: 10%;
+    }
+
+    .main_title {
+      font-size: 56px;
+    }
+   
+    .main_subtitle {
+      font-size: 28px;
+    }
+
+    .order_text {
+      font-size: 14px;
+    }
+
+    .logo_number {
+      font-size: 20px;
+    }
+
+    .header_call a{
+      font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .order_button {
+      font-size: 19px;
+    }
+
+    .main_title {
+      font-size: 46px;
+    }
+   
+    .main_subtitle {
+      font-size: 18px;
+    }
+
+    .order_text {
+      font-size: 9px;
+    }
+
+    .logo_number {
+      font-size: 15px;
+    }
+
+    .header_call a{
+      font-size: 10px;
+    }
+
+    .header_menu a {
+      font-size: 10px;
+    }
+
+    header {
+      height: 70vw;
+    }
+
+    .set_title {
+      font-size: 38px;
+    }
+    .slider {
+      height: 50vh;
+    }
+}
